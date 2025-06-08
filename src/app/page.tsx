@@ -22,15 +22,6 @@ export default function Home() {
   return (
     <>
       <ScrollUp />
-      <div>
-        <Image
-          src="/images/hero/11.jpg"
-          alt="Hero Background"
-          fill
-          className="object-contain"
-          priority
-        />
-      </div>
       <Hero />
       <Features />
       <Video />
