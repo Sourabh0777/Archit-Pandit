@@ -14,17 +14,7 @@ const Header = () => {
   };
 
   // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
+  const [sticky, setSticky] = useState(true);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -44,7 +34,7 @@ const Header = () => {
         className={`header top-0 left-0 z-40 flex w-full items-center ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark shadow-sticky fixed z-9999 bg-white/80 backdrop-blur-xs transition"
-            : " bg-transparent"
+            : "shadow-sticky bg-transparent"
         }`}
       >
         <div className="container">

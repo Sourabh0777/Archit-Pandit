@@ -1,5 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
 const Hero = () => {
   return (
     <>
@@ -12,13 +12,18 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
-                  Free and Open-Source Next.js Template for Startup & SaaS
+                  Dr. ARCHIT PANDIT
                 </h1>
                 <p className="text-body-color dark:text-body-color-dark mb-12 text-base leading-relaxed! sm:text-lg md:text-xl">
-                  Startup is free Next.js template for startups and SaaS
-                  business websites comes with all the essential pages,
-                  components, and sections you need to launch a complete
-                  business website, built-with Next 13.x and Tailwind CSS.
+                  Dr. Archit Pandit is a leading Surgical Oncologist with over
+                  20 years of expertise, heading the Department of Surgical
+                  Oncology at Fortis Escorts, New Delhi & Gurugram. Gold
+                  medalist in MS General Surgery, he trained at AIIMS and holds
+                  fellowships in advanced laparoscopic and robotic cancer
+                  surgery. His practice focuses exclusively on minimally
+                  invasive treatment of GI, thoracic, and gynecological cancers.
+                  Renowned for his precision and compassionate care, Dr. Pandit
+                  is considered one of the top cancer specialists in Gurgaon.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                   <Link
@@ -38,7 +43,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
+        {/* <div className="absolute top-0 right-0 z-[-1] opacity-30 lg:opacity-100">
           <svg
             width="450"
             height="556"
@@ -278,7 +283,7 @@ const Hero = () => {
               </radialGradient>
             </defs>
           </svg>
-        </div>
+        </div> */}
       </section>
     </>
   );
