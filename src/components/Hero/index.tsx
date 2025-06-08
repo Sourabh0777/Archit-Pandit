@@ -5,10 +5,20 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="dark:bg-gray-dark bg-white"
+        className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white"
       >
+        <div>
+          <Image
+            src="/images/hero/11.jpg"
+            alt="Hero Background"
+            width={1600}
+            height={100}
+            // className="object-contain"
+            priority
+          />
+        </div>
         <div className="container">
-          <div className="mx-4 flex flex-wrap">
+          <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
                 <h1 className="mb-5 text-3xl leading-tight font-bold text-black sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
