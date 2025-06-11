@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
+import Image from "next/image";
 // import SingleFeature from "./SingleFeature";
 // import featuresData from "./featuresData";
 
@@ -63,7 +64,7 @@ const Features = () => {
 
               
               <div className="grid items-center gap-10 rounded-xl bg-gray-50 p-6 shadow-lg md:grid-cols-2">
-                <img
+                <Image
                   src={current.image}
                   alt={current.label}
                   className="h-auto w-full rounded-lg shadow"

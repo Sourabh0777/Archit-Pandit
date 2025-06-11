@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const SignupPage = () => {
@@ -117,10 +118,12 @@ const SignupPage = () => {
               key={index}
               className="overflow-hidden rounded-xl bg-white shadow-lg transition duration-300 hover:shadow-xl"
             >
-              <img
+              <Image
+              
                 src={img}
                 alt={`Image ${index + 1}`}
                 className="h-64 w-full object-cover"
+                
               />
               <div className="p-4 text-center">
                 <p className="font-medium text-gray-700">Image {index + 1}</p>

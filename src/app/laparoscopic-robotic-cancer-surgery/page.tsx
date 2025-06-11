@@ -111,7 +111,7 @@ const HipecSurgery = () => {
             Robotic Cancer Surgery
           </h1>
           <p className="mt-3">
-            A Robotic Surgery doesn't mean that a robot is performing the
+            A Robotic Surgery doesn&apos;t mean that a robot is performing the
             operation.Instead it, refres to when surgeons direct the surgery
             using Robotic tools.
           </p>

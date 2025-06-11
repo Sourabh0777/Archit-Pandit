@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const image = [
@@ -35,11 +36,11 @@ const AboutSectionTwo = () => {
     <section className="bg-white py-20 text-center dark:bg-[#17202E]">
       <h2 className="mb-2 text-3xl font-bold text-gray-800 dark:text-white">OUR ACHIEVEMENT</h2>
       <div className="mb-10 flex justify-center">
-        <img src="/icons/dna.svg" alt="DNA icon" className="h-6" />
+        <Image src="/icons/dna.svg" alt="DNA icon" className="h-6" />
       </div>
 
       <div className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-lg">
-        <img
+        <Image
           src={image[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
           width={100}

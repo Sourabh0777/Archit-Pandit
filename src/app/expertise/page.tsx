@@ -67,7 +67,7 @@ const HipecSurgery = () => {
         {/* Image Section */}
         <div className="w-full overflow-hidden rounded-lg shadow-lg">
           <Image
-            src={surgeryImage}
+            src={}
             alt="HIPEC Surgery"
             className="h-auto w-full object-cover"
             priority
