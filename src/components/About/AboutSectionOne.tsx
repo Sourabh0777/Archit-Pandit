@@ -18,54 +18,59 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Crafted for Startup, SaaS and Business Sites."
-                paragraph="The main ‘thrust’ is to focus on educating attendees on how to best protect highly vulnerable business applications with interactive panel discussions and roundtables."
-                mb="44px"
-              />
-
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Tailwind CSS" />
-                    <List text="Use for lifetime" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Next.js" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
-                  </div>
+    <section className="bg-white py-12 dark:bg-[#121723]">
+      <div className="container mx-auto px-4 ">
+        <h2 className="mb-10 text-center text-3xl font-bold text-gray-800">
+          Treatment
+        </h2>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {[
+            {
+              title: "Gastrointestinal Cancers",
+              icon: "🧠",
+              desc: "Gastrointestinal Cancers spread to nearby organs and blood vessels.",
+            },
+            {
+              title: "Gynaecological cancer",
+              icon: "⚕️",
+              desc: "Gynaecological cancer is cancer that begins in the gallbladder.",
+            },
+            {
+              title: "Thoracic/Chest cancers",
+              icon: "🫁",
+              desc: "Thoracic/Chest cancers treatment depends on the size, location.",
+            },
+            {
+              title: "Head And Neck Cancer",
+              icon: "🦴",
+              desc: "1-2% of pancreatic cancers are neuroendocrine tumors.",
+            },
+            {
+              title: "Breast Cancer",
+              icon: "🎗️",
+              desc: "Breast cancer forms in the cells of the breasts. It's the most common after skin cancer.",
+            },
+          ].map(({ title, icon, desc }) => (
+            <div
+              key={title}
+              className="rounded-xl border border-gray-200 bg-white p-6 shadow-md transition-shadow duration-300 hover:shadow-xl"
+            >
+              <div className="flex items-start space-x-4">
+                <div className="text-4xl">{icon}</div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-800">
+                    {title}
+                  </h3>
+                  <p className="mt-2 text-sm text-gray-600">
+                    {desc}
+                    <span className="ml-1 cursor-pointer font-medium text-blue-600 hover:underline">
+                      Read More...
+                    </span>
+                  </p>
                 </div>
               </div>
             </div>
-
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
-                <Image
-                  src="/images/about/about-image.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

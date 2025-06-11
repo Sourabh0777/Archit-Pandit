@@ -1,124 +1,70 @@
-import Link from "next/link";
+"use client"
+import { useState } from "react";
+import profile from "../../../public/profile.webp";
 
-const Breadcrumb = ({
-  pageName,
-  description,
-}: {
-  pageName: string;
-  description: string;
-}) => {
+const Breadcrumb = () => {
+  const [expanded, setExpanded] = useState(false);
+
+  // Full paragraphs content
+  const paragraphs = [
+    `I am a Surgical Oncologist based in Delhi-NCR, specializing in thoracic and gastroesophageal malignancies, with a strong emphasis on minimally invasive oncology procedures. I was honored with the Best Outgoing Surgeon Award (2008) by Rajiv Gandhi University of Health Sciences and received advanced training in Surgical Oncology at AIIMS, New Delhi.`,
+    `With over 12 years of academic and clinical experience post-MS in General Surgery, I’ve held leadership roles at premier institutions like MAX Institute of Cancer Care and SHALBY Sanar International Hospital. Currently, I serve as Director & Head of Surgical Oncology at Fortis Escorts, Okhla and Fortis Hospital, Gurugram.`,
+    `Recognized as one of the best oncologists in Gurgaon, I am known for my compassionate, patient-focused approach and individualized treatment plans. My clinical work includes Laparoscopic D2 gastrectomies, Thoracoscopic Esophageal surgeries, and Open Lung resections (Lobectomies and Pneumonectomies).`,
+    `I have received the Video Award at the Indian Cancer Congress (2013) and the Best Video Award at ACOS (2016). My research is primarily focused on Esophageal Cancers and has been published in leading national and international journals.`,
+    `I am a firm believer in evidence-based practice. I speak English, Hindi, Marathi, and Punjabi, enabling effective communication with a diverse patient population.`,
+  ];
+
+ 
+  const previewCount = 2;
+
   return (
-    <>
-      <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 md:w-8/12 lg:w-7/12">
-              <div className="mb-8 max-w-[570px] md:mb-0 lg:mb-12">
-                <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  {pageName}
-                </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
-                  {description}
-                </p>
-              </div>
-            </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
-              <div className="text-end">
-                <ul className="flex items-center md:justify-end">
-                  <li className="flex items-center">
-                    <Link
-                      href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-primary"
-                    >
-                      Home
-                    </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
-                  </li>
-                  <li className="text-base font-medium text-primary">
-                    {pageName}
-                  </li>
-                </ul>
-              </div>
+    <section className="relative z-10 overflow-hidden pt-10  dark:bg-gray-900">
+      <div className="container">
+        <div className="-mx-4 flex flex-wrap">
+          
+          <div className="w-full px-4 md:w-7/12 lg:w-6/12 mt-10">
+            <div className="mb-12 max-w-[570px]">
+              <h1 className="mb-8 text-4xl font-extrabold text-black dark:text-white">
+                Dr. Archit Pandit
+              </h1>
+
+              { (expanded ? paragraphs : paragraphs.slice(0, previewCount)).map((para, idx) => (
+                <p
+                  key={idx}
+                  className="mb-4 text-base leading-relaxed text-gray-700 dark:text-gray-300"
+                  dangerouslySetInnerHTML={{ __html: para }}
+                />
+              ))}
+
+              <button
+                className="text-green-600 font-semibold hover:underline"
+                onClick={() => setExpanded(!expanded)}
+              >
+                {expanded ? "See less" : "See more"}
+              </button>
             </div>
           </div>
-        </div>
 
-        <div>
-          <span className="absolute left-0 top-0 z-[-1]">
-            <svg
-              width="287"
-              height="254"
-              viewBox="0 0 287 254"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.1"
-                d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
-                fill="url(#paint0_linear_111:578)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_111:578"
-                  x1="-40.5"
-                  y1="117"
-                  x2="301.926"
-                  y2="-97.1485"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span className="absolute right-0 top-0 z-[-1]">
-            <svg
-              width="628"
-              height="258"
-              viewBox="0 0 628 258"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.1"
-                d="M669.125 257.002L345.875 31.9983L524.571 -15.8832L669.125 257.002Z"
-                fill="url(#paint0_linear_0:1)"
-              />
-              <path
-                opacity="0.1"
-                d="M0.0716344 182.78L101.988 -15.0769L142.154 81.4093L0.0716344 182.78Z"
-                fill="url(#paint1_linear_0:1)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_0:1"
-                  x1="644"
-                  y1="221"
-                  x2="429.946"
-                  y2="37.0429"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_0:1"
-                  x1="18.3648"
-                  y1="166.016"
-                  x2="105.377"
-                  y2="32.3398"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
+          {/* RIGHT COLUMN – Image + Badge */}
+          <div className="relative w-1/2">
+            <div
+              className="h-[700px] w-[700px] rounded-full bg-green-800 bg-cover"
+              style={{ backgroundImage: `url(${profile.src})` }}
+            ></div>
+
+            <span className="absolute bottom-25 rounded-full left-3 flex h-auto w-44 border-2 border-black bg-white px-4 py-2 shadow-md">
+              <span className="text-4xl font-extrabold text-black">10</span>
+              <span className="text-3xl font-extrabold text-green-600">+</span>
+              <div className="ml-2 flex flex-col leading-4">
+                <span className="text-xs font-bold text-black">YEARS OF</span>
+                <span className="text-xs font-bold text-black">SURGICAL</span>
+                <span className="text-xs font-bold text-green-600">EXPERIENCE</span>
+              </div>
+            </span>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 

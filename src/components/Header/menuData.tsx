@@ -9,7 +9,7 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Know your Dr",
+    title: "Know Us",
     path: "/about",
     newTab: false,
   },
@@ -59,13 +59,13 @@ const menuData: Menu[] = [
       {
         id: 61,
         title: "HIPEC Surgery",
-        path: "/about",
+        path: "/expertise",
         newTab: false,
       },
       {
         id: 62,
         title: "Laparoscopic Cancer Surgery",
-        path: "/contact",
+        path: "/laparoscopic-robotic-cancer-surgery",
         newTab: false,
       },
       {
@@ -78,8 +78,8 @@ const menuData: Menu[] = [
   },
   {
     id: 33,
-    title: "Blog",
-    path: "/blog",
+    title: "Video",
+    path: "/video",
     newTab: false,
   },
   {
