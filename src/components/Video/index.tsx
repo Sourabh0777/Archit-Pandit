@@ -8,7 +8,7 @@ export default function Video() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <section className="relative z-10 px-4 py-16 md:py-20 lg:py-28">
+    <section className="relative z-10 px-4 py-16 md:py-20 lg:py-3">
     
       <div className="mx-auto mb-12 max-w-3xl text-center">
         <SectionTitle

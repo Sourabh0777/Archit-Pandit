@@ -45,7 +45,6 @@ const Features = () => {
 
           <div className="px-4 py-4 text-gray-800">
             <div className="mx-auto max-w-5xl">
-              
               <div className="mb-10 flex flex-wrap justify-center gap-4">
                 {tabs.map((tab) => (
                   <button
@@ -62,9 +61,10 @@ const Features = () => {
                 ))}
               </div>
 
-              
               <div className="grid items-center gap-10 rounded-xl bg-gray-50 p-6 shadow-lg md:grid-cols-2">
                 <Image
+                  height={500}
+                  width={500}
                   src={current.image}
                   alt={current.label}
                   className="h-auto w-full rounded-lg shadow"

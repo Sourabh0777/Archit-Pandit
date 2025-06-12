@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="mb-4 border-b border-cyan-500 pb-2 text-xl font-bold text-white">
+            <h4 className="mb-4 dark:text-white border-b border-cyan-500 pb-2 text-xl font-bold text-white">
               Treatment
             </h4>
             <ul className="space-y-2">

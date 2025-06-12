@@ -20,7 +20,7 @@ const AboutSectionOne = () => {
   return (
     <section className="bg-white py-12 dark:bg-[#121723]">
       <div className="container mx-auto px-4 ">
-        <h2 className="mb-10 text-center text-3xl font-bold text-gray-800">
+        <h2 className="mb-10 dark:text-white text-center text-3xl font-bold text-gray-800">
           Treatment
         </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">

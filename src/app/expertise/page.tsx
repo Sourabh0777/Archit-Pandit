@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import surgeryImage from "../../../public/profile.webp"; 
+import doctor from "../../../public/doctor.png";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 
 const HipecSurgery = () => {
   return (
     <section className="bg-white px-4 py-20 text-gray-800 dark:bg-[#1B2533] dark:text-white">
-      <div className="mx-auto grid max-w-7xl items-start gap-10 md:grid-cols-2 ">
+      <div className="mx-auto grid max-w-7xl items-start gap-10 md:grid-cols-2">
         <div>
           <h1 className="mb-6 border-l-4 border-blue-500 pl-4 text-4xl font-bold">
             HIPEC Surgery
@@ -42,32 +42,14 @@ const HipecSurgery = () => {
             chemotherapy finds itself difficult to reach the peritoneum surface
             and hence these tumors are best treated by HIPEC.
           </p>
-
-          <div>
-            <div>
-              <h4 className="font-bold text-blue-700">
-                1. So, what is Hyperthermic intraperitoneal chemotherapy
-                (HIPEC)?
-              </h4>
-              <p>
-                HIPEC stands for Hyperthermic IntraPEritoneal Chemotherapy.
-                Certain cancers which are limited to peritoneum lining can
-                receive HIPEC. In basic language it’s a chemotherapy medicine
-                which is heated around 42-degreeCelsius so that it penetrates
-                tissues better. Conventional injectable chemotherapy is not able
-                to reach the peritoneal surface and HIPEC delivers chemotherapy
-                straightly to the cancer cells in the abdomen.
-              </p>
-            </div>
-
-            {/* Add more points like this */}
-          </div>
         </div>
 
         {/* Image Section */}
         <div className="w-full overflow-hidden rounded-lg shadow-lg">
           <Image
-            src={}
+            src={doctor}
+            height={500}
+            width={500}
             alt="HIPEC Surgery"
             className="h-auto w-full object-cover"
             priority
@@ -75,6 +57,20 @@ const HipecSurgery = () => {
         </div>
       </div>
       <div className="mx-auto max-w-7xl space-y-4">
+        <div className="mx-auto mt-4 max-w-7xl">
+          <h4 className="font-bold text-blue-700">
+            1. So, what is Hyperthermic intraperitoneal chemotherapy (HIPEC)?
+          </h4>
+          <p>
+            HIPEC stands for Hyperthermic IntraPEritoneal Chemotherapy. Certain
+            cancers which are limited to peritoneum lining can receive HIPEC. In
+            basic language it’s a chemotherapy medicine which is heated around
+            42-degreeCelsius so that it penetrates tissues better. Conventional
+            injectable chemotherapy is not able to reach the peritoneal surface
+            and HIPEC delivers chemotherapy straightly to the cancer cells in
+            the abdomen.
+          </p>
+        </div>
         <div className="mx-auto mt-4 max-w-7xl">
           <h4 className="font-bold text-blue-700">
             2. What all cancers can be treated by HIPEC surgery
